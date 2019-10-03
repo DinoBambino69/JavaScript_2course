@@ -1,1 +1,1 @@
-# JavaScript_2course
+# Илалов Максим 11-806
