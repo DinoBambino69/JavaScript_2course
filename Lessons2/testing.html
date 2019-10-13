@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Testing</title>
+</head>
+<body>
+<script>
+    var salaries = {
+        "Vasya" : 100,
+        "Petya" : 300,
+        "Dasha" : 250
+    };
+
+    var n = -1;
+    var name;
+    for (var salar in salaries) {
+        if (salaries[salar] > n) {
+            n = salaries[salar];
+            name = salar;
+        }
+    }
+    alert(name);
+</script>
+</body>
+</html>

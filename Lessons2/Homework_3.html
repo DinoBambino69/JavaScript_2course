@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    arr = [1, 2, 3, 4, 5];
+    function getSumArray(arr) {
+        for (let i = 0; i < arr.length; i++) {
+            var sum = 0;
+            while (arr[i] != 0) {
+                sum += arr[i];
+                arr[i]--;
+            }
+            arr[i] = sum;
+        }
+        return arr;
+    }
+
+    alert(getSumArray(arr));
+</script>
+</body>
+</html>

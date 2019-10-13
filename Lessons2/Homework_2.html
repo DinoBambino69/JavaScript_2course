@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var obj = {
+        className: 'block menu'
+    };
+
+    addClass(obj, 'new-block');
+    addClass(obj, 'block');
+    addClass(obj, 'blue');
+
+    function addClass(obj, string) {
+        if (!obj.className.includes(string)) {
+            obj.className += ' ' + string;
+        }
+    }
+
+    function deleteClass(obj, string) {
+        if (obj.className.includes(string + ' ')) {
+            return obj.className = obj.className.replace(string + ' ', '');
+        } else if (obj.className.includes(' ' + string)) {
+            return obj.className = obj.className.replace(' ' + string, '');
+        }
+    }
+    alert(obj.className);
+    alert(deleteClass(obj, 'menu'));
+</script>
+</body>
+</html>
