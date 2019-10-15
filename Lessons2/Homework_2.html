@@ -10,25 +10,31 @@
         className: 'block menu'
     };
 
-    addClass(obj, 'new-block');
-    addClass(obj, 'block');
-    addClass(obj, 'blue');
-
     function addClass(obj, string) {
         if (!obj.className.includes(string)) {
             obj.className += ' ' + string;
         }
     }
 
+
     function deleteClass(obj, string) {
+        while (obj.className.includes(string)) {
         if (obj.className.includes(string + ' ')) {
-            return obj.className = obj.className.replace(string + ' ', '');
+                obj.className = obj.className.replace(string + ' ', '');
         } else if (obj.className.includes(' ' + string)) {
-            return obj.className = obj.className.replace(' ' + string, '');
+                obj.className = obj.className.replace(' ' + string, '');
+            }
         }
+        return obj.className;
     }
+
+    addClass(obj, 'new-block');
+    addClass(obj, 'block');
+    addClass(obj, 'blue');
+
+    // deleteClass(obj, 'menu');
+
     alert(obj.className);
-    alert(deleteClass(obj, 'menu'));
 </script>
 </body>
 </html>
